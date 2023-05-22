@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Win bar</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="taskbar">
+        <ul class="start">
+          <li><img class="startIcon" src="./img/start.png" /></li>
+          <li><img src="./img/chrome.png" /></li>
+          <li><img src="./img/explorer.png" /></li>
+          <li><img src="./img/terminal.png" /></li>
+        </ul>
+        <ul class="toolbar">
+          <li><img src="./img/steam.png" /></li>
+          <li><img src="./img/defender.png" /></li>
+          <li><img src="./img/wifi.ico" /></li>
+          <li><img src="./img/volume.png" /></li>
+          <li><p id="time"></p></li>
+        </ul>
+      </div>
+    </nav>
+    <script>
+      function updateTime() {
+        var currentTime = new Date();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+
+        hours = (hours < 10 ? "0" : "") + hours;
+        minutes = (minutes < 10 ? "0" : "") + minutes;
+
+        var timeString = hours + ":" + minutes;
+        document.getElementById("time").textContent = timeString;
+      }
+
+      setInterval(updateTime, 100);
+    </script>
+  </body>
+</html>
