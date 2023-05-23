@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 * {
     margin:0;
@@ -8,7 +8,7 @@
 
 body {
     background-color: #080808;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -26,6 +26,7 @@ ul {
     display: flex;
     flex-direction: row;
     list-style-type: none;
+    user-select: none;
 }
 
 .start li {
@@ -41,7 +42,29 @@ ul {
     align-items: center;
     color: whitesmoke;
     padding: 0 0.2rem;
+    margin: 0 0.1rem;
 }
+
+
+.toolbar li:hover .tooltip-text {
+    visibility: visible;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    margin: -20rem -10rem;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease;
+}
+
+  
 
 .toolbar li:last-child {
     padding-right: 0.5rem;
@@ -76,7 +99,7 @@ ul {
 }
 
 #time {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .taskbar {
