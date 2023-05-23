@@ -84,7 +84,8 @@ ul {
 }
 
 
-.start li:hover {
+.start li:hover,
+.toolbar li:hover {
     background-color: var(--main-light);
 }
 
