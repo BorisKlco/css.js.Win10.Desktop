@@ -6,6 +6,8 @@
     box-sizing: border-box;
 }
 
+img { display: block;}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -57,7 +59,7 @@ ul {
 
 
 .start img {
-    display: flex;
+    
     justify-content: center;
     align-items: center;
     object-fit: contain;
@@ -66,7 +68,7 @@ ul {
 }
 
 .toolbar img {
-    display: flex;
+    
     justify-content: center;
     align-items: center;
     object-fit: contain;
