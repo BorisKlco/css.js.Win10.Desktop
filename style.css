@@ -112,7 +112,7 @@ ul {
 
 .startMenu {
     position: absolute;
-    bottom: 0; 
+    bottom: 48px; 
     left: 0; 
     background-color: var(--main-light);
     display: flex;
@@ -120,14 +120,13 @@ ul {
     max-width: 28rem;
     min-height: 42rem;
     max-height: 42rem;
-    z-index: -1;
 }
 
 .startMenu ul {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    max-height: 38rem;
+    max-height: 42rem;
 }
 
 .controls {
@@ -140,17 +139,11 @@ ul {
     width: 16rem;
 }
 
-
-.programs img, 
 .programs p {
-    font-size: 1.5rem;
-    display: inline-block;
     color: white;
-    margin-top: 1rem;
-}
-
-.programs p {
+    display: inline-block;
     padding-left: 0.2rem;
+    font-size: 1.5rem;
 }
 
 
@@ -162,14 +155,21 @@ ul {
     width: 1.2rem;
 }
 
-.startMenu .controls li {
+.controls li,
+.programs li {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1rem 0;
 }
 
-.programs li:hover {
+.programs li {
+    justify-content: flex-start;
+    padding: 0.5rem 0;
+}
+
+.programs li:hover,
+.controls li:hover {
     background-color: black;
 }
 
