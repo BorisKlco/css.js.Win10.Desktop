@@ -13,7 +13,9 @@
     <nav>
       <div class="taskbar">
         <ul class="start">
-          <li><img class="startIcon" src="./img/start.png" /></li>
+          <li id="showStart">
+            <img class="startIcon" src="./img/start.png" />
+          </li>
           <li><img src="./img/chrome.png" /></li>
           <li><img src="./img/explorer.png" /></li>
           <li><img src="./img/terminal.png" /></li>
@@ -29,6 +31,43 @@
         </ul>
       </div>
     </nav>
+    <div id="startMenu" class="startMenu" style="visibility: hidden">
+      <ul class="controls">
+        <li><img src="./img/file.png" /></li>
+        <li><img src="./img/settings.png" /></li>
+        <li><img src="./img/power.png" /></li>
+      </ul>
+      <ul class="programs">
+        <li>
+          <img src="./img/pp.png" />
+          <p>Adobe Photoshop</p>
+        </li>
+        <li>
+          <img src="./img/chrome.png" />
+          <p>Google Chrome</p>
+        </li>
+        <li>
+          <img src="./img/drive.png" />
+          <p>Google Drive</p>
+        </li>
+        <li>
+          <img src="./img/store.png" />
+          <p>Microsoft Excel</p>
+        </li>
+        <li>
+          <img src="./img/outlook.png" />
+          <p>Microsoft Outlook</p>
+        </li>
+        <li>
+          <img src="./img/store.png" />
+          <p>Microsoft Store</p>
+        </li>
+        <li>
+          <img src="./img/word.png" />
+          <p>Microsoft Word</p>
+        </li>
+      </ul>
+    </div>
     <script>
       function updateTime() {
         var currentTime = new Date();
@@ -42,6 +81,19 @@
       }
 
       setInterval(updateTime, 100);
+
+      var myDiv = document.getElementById("startMenu");
+      var myButton = document.getElementById("showStart");
+
+      // Add a click event listener to the button
+      myButton.addEventListener("click", function () {
+        // Toggle the visibility of the div
+        if (myDiv.style.visibility === "hidden") {
+          myDiv.style.visibility = "visible";
+        } else {
+          myDiv.style.visibility = "hidden";
+        }
+      });
     </script>
   </body>
 </html>
