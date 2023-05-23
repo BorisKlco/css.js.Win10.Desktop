@@ -135,7 +135,7 @@ ul {
 }
 
 .programs {
-    margin-top: 4rem;
+    margin-top: 1rem;
     width: 16rem;
 }
 
@@ -165,7 +165,13 @@ ul {
 
 .programs li {
     justify-content: flex-start;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.5rem;
+}
+
+.appsText {
+    font-size: 2rem;
+    color:whitesmoke;
+    padding: 1rem 0.5rem;
 }
 
 .programs li:hover,
