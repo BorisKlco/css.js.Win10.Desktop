@@ -117,7 +117,7 @@ ul {
 
 
 .startMenu {
-    transition:opacity 0.2s ease-in;
+    transition:opacity 0.1s ease-in;
     position: absolute;
     bottom: 48px; 
     left: 0; 
