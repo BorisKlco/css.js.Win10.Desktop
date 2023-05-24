@@ -14,7 +14,7 @@
       <div class="taskbar">
         <ul class="start">
           <li id="showStart">
-            <img class="startIcon" src="./img/start.png" />
+            <img id="startIcon" class="startIcon" src="./img/start.png" />
           </li>
           <li><img src="./img/chrome.png" /></li>
           <li><img src="./img/explorer.png" /></li>
@@ -83,18 +83,34 @@
 
       setInterval(updateTime, 100);
 
-      var myDiv = document.getElementById("startMenu");
-      var myButton = document.getElementById("showStart");
+      // Showing start menu after clicking start icon
+      const startMenu = document.getElementById("startMenu");
+      document
+        .getElementById("showStart")
+        .addEventListener("click", function () {
+          if (startMenu.style.visibility === "hidden") {
+            startMenu.style.visibility = "visible";
+          } else {
+            startMenu.style.visibility = "hidden";
+          }
+        });
 
-      // Add a click event listener to the button
-      myButton.addEventListener("click", function () {
-        // Toggle the visibility of the div
-        if (myDiv.style.visibility === "hidden") {
-          myDiv.style.visibility = "visible";
-        } else {
-          myDiv.style.visibility = "hidden";
-        }
-      });
+      // END --- Showing start menu after clicking start icon
+
+      // Changing start icon after hovering over
+      document
+        .getElementById("showStart")
+        .addEventListener("mouseenter", function () {
+          document.getElementById("startIcon").src = "./img/start-hover.png";
+        });
+
+      document
+        .getElementById("showStart")
+        .addEventListener("mouseleave", function () {
+          document.getElementById("startIcon").src = "./img/start.png";
+        });
+
+      // END --- Changing start icon after hovering over
     </script>
   </body>
 </html>
