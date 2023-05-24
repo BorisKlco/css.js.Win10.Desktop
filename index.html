@@ -3,13 +3,35 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Win bar</title>
+    <title>Windows 10 Desktop</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="./img/start-hover.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <ul class="desktopIcons">
+      <li>
+        <img src="./img/pc.ico" />
+        <p>Home</p>
+      </li>
+      <li>
+        <img src="./img/bin.ico" />
+        <p>Bin</p>
+      </li>
+      <li>
+        <img src="./img/dvd.ico" />
+        <p>DVD</p>
+      </li>
+      <li>
+        <img src="./img/store.png" />
+        <p>Store</p>
+      </li>
+      <li>
+        <img src="./img/ini.ico" />
+        <p>desktop.ini</p>
+      </li>
+    </ul>
     <nav>
       <div class="taskbar">
         <ul class="start">
@@ -17,7 +39,7 @@
             <img id="startIcon" class="startIcon" src="./img/start.png" />
           </li>
           <li><img src="./img/chrome.png" /></li>
-          <li><img src="./img/explorer.png" /></li>
+          <li><img src="./img/explorer.ico" /></li>
           <li><img src="./img/terminal.png" /></li>
         </ul>
         <ul class="toolbar">
@@ -31,7 +53,7 @@
         </ul>
       </div>
     </nav>
-    <div id="startMenu" class="startMenu" style="opacity: 0">
+    <div id="startMenu" class="startMenu" style="display: none">
       <ul class="controls">
         <li><img src="./img/file.png" /></li>
         <li><img src="./img/settings.png" /></li>
@@ -107,10 +129,10 @@
       document
         .getElementById("showStart")
         .addEventListener("click", function () {
-          if (startMenu.style.opacity === "0") {
-            startMenu.style.opacity = "1";
+          if (startMenu.style.display === "none") {
+            startMenu.style.display = "flex";
           } else {
-            startMenu.style.opacity = "0";
+            startMenu.style.display = "none";
           }
         });
 

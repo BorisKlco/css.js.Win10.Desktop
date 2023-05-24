@@ -26,6 +26,31 @@ body {
     font-family: 'Abel', sans-serif;
 }
 
+.desktopIcons {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    color:white;
+    font-size: 1rem;
+}
+
+.desktopIcons li {
+    margin-bottom: 1.5rem;
+    max-width: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desktopIcons img {
+    height: 4rem;
+    margin:0.5rem;
+}
+
+.desktopIcons li:last-child {
+    opacity: 50%;
+}
+
 
 nav {
     bottom: 0; 
@@ -143,29 +168,15 @@ ul {
 }
 
 .programs {
-    animation-name: programsKey;
-    animation-duration: 1.5s;
     margin-top: 1rem;
     width: 16rem;
 }
 
-@keyframes programsKey {
-    0%   {margin-top:6rem;}
-    100% {margin-top:1rem}
-  }
-
 .appsIcons {
-    animation-name: iconsKey;
-    animation-duration: 1.7s;
     margin-top: 1rem;
     padding-left: 0.2rem;
     width: 14rem;
 }
-
-@keyframes iconsKey {
-    0%   {margin-top:4rem;}
-    100% {margin-top:1rem}
-  }
 
 .programs p {
     color: white;
@@ -206,12 +217,23 @@ ul {
 }
 
 .programs li {
+    animation-name: programsKey;
+    animation-timing-function: ease-in;
+    animation-duration: 0.2s;
     justify-content: flex-start;
     padding: 0.5rem 0.5rem;
 }
 
+@keyframes programsKey {
+    0%   {margin-top:0.8rem;}
+    100% {}
+  }
+
 
 .appsIcons li {
+    animation-name: iconsKey;
+    animation-timing-function: ease-in;
+    animation-duration: 0.1s;
     padding: 0;
     width: 8rem;
     height: 8rem;
@@ -220,6 +242,10 @@ ul {
     background-color: var(--main-evenlighter);
 }
 
+@keyframes iconsKey {
+    0%   {margin-top:0.2rem;}
+    100% {}
+  }
 
 .appsIcons img {
     height: 4rem;
@@ -243,4 +269,10 @@ ul {
 .appsIcons li:hover {
     outline: 0.1rem solid hsla(0, 0%, 96%, 0.636);
     filter: drop-shadow(2px 2px 4px var(--main-shadow));
+}
+
+.desktopIcons li:hover {
+    outline: 1px solid hsla(0, 0%, 96%, 0.2);
+    background-color: hsla(0, 0%, 96%, 0.1) ;
+    filter: drop-shadow(0.1rem 0.1rem 0.2rem black);
 }
