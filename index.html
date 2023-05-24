@@ -31,13 +31,13 @@
         </ul>
       </div>
     </nav>
-    <div id="startMenu" class="startMenu" style="visibility: hidden">
+    <div id="startMenu" class="startMenu" style="opacity: 0">
       <ul class="controls">
         <li><img src="./img/file.png" /></li>
         <li><img src="./img/settings.png" /></li>
         <li><img src="./img/power.png" /></li>
       </ul>
-      <ul class="programs">
+      <ul id="test" class="programs">
         <h3 class="appsText">Start</h3>
         <li>
           <img src="./img/pp.png" />
@@ -107,10 +107,10 @@
       document
         .getElementById("showStart")
         .addEventListener("click", function () {
-          if (startMenu.style.visibility === "hidden") {
-            startMenu.style.visibility = "visible";
+          if (startMenu.style.opacity === "0") {
+            startMenu.style.opacity = "1";
           } else {
-            startMenu.style.visibility = "hidden";
+            startMenu.style.opacity = "0";
           }
         });
 
