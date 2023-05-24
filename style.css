@@ -4,6 +4,7 @@
 :root {
     --main-color: black;
     --main-light: #333;
+    --main-shadow: #292929;
     --main-evenlighter: #3b3b3b;
 }
 
@@ -154,7 +155,7 @@ ul {
 .programs p {
     color: white;
     display: inline-block;
-    padding-left: 0.2rem;
+    padding-left: 0.4rem;
     font-size: 1.5rem;
 }
 
@@ -169,7 +170,7 @@ ul {
 }
 
 .startMenu .programs img {
-    width: 1.2rem;
+    width: 2rem;
 }
 
 .controls li,
@@ -208,6 +209,7 @@ ul {
 .appsIcons img {
     height: 4rem;
     width: auto;
+    filter: drop-shadow(3px 3px 6px var(--main-shadow));
 }
 
 .appsText {
@@ -220,8 +222,10 @@ ul {
 .programs li:hover,
 .controls li:hover {
     background-color: var(--main-evenlighter);
+    filter: drop-shadow(1px 1px 6px var(--main-shadow));
 }
 
 .appsIcons li:hover {
     outline: 0.1rem solid hsla(0, 0%, 96%, 0.636);
+    filter: drop-shadow(2px 2px 4px var(--main-shadow));
 }
