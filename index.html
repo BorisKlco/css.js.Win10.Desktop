@@ -52,7 +52,7 @@
           <p>Google Drive</p>
         </li>
         <li>
-          <img src="./img/store.png" />
+          <img src="./img/excel.png" />
           <p>Microsoft Excel</p>
         </li>
         <li>
@@ -68,17 +68,36 @@
           <p>Microsoft Word</p>
         </li>
       </ul>
+
+      <ul class="appsIcons">
+        <h3 class="appsText">Apps</h3>
+        <li>
+          <img src="./img/outlook.png" />
+          <p>Outlook 2019</p>
+        </li>
+        <li>
+          <img src="./img/word.png" />
+          <p>Word 2019</p>
+        </li>
+        <li>
+          <img src="./img/excel.png" />
+          <p>Excel 2019</p>
+        </li>
+        <li>
+          <img src="./img/store.png" />
+          <p>Microsoft Store</p>
+        </li>
+      </ul>
     </div>
     <script>
       function updateTime() {
-        var currentTime = new Date();
-        var hours = currentTime.getHours();
-        var minutes = currentTime.getMinutes();
+        const currentTime = new Date();
+        let hours = currentTime.getHours();
+        let minutes = currentTime.getMinutes();
 
         minutes = (minutes < 10 ? "0" : "") + minutes;
 
-        var timeString = hours + ":" + minutes;
-        document.getElementById("time").textContent = timeString;
+        document.getElementById("time").textContent = hours + ":" + minutes;
       }
 
       setInterval(updateTime, 100);
