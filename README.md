@@ -1,7 +1,6 @@
 # css.js.Win10.Desktop
 Win10 Desktop in css/js
 
-Demo: https://win10desktop.netlify.app/
 
 
 <p align="center">
